@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if command -v xterm &> /dev/null
+then
+        echo Building .Xresources...
+        cat .xterm > ~/.Xresources
+fi
+
+if command -v xrdb &> /dev/null
+then
+        echo Reloading .Xresources...
+        xrdb ~/.Xresources
+fi
