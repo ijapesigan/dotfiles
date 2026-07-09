@@ -1,3 +1,6 @@
+# Do nothing for non-interactive SSH commands such as rsync/scp
+[[ $- != *i* ]] && return
+
 [ -f /etc/bashrc ] && . /etc/bashrc
 [ -f ~/.bash-fastfetch ] && . ~/.bash-fastfetch
 [ -f ~/.bash-aliases ] && . ~/.bash-aliases
